@@ -25,9 +25,9 @@
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="https://www.linkedin.com/in/alexandrino-m/" class="nav-link text-light" >Linkedin </a>
                 </li>
-                <!--<li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link text-light">Contato</a>
-                </li> -->
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="wa.me/5544988074140" class="nav-link text-light">Contato</a>
+                </li> 
             </ul>     
             
         </nav><br>
@@ -43,25 +43,24 @@
                             <div class="card card-blue card-outline " >
                                 <div class="card-body box-profile ">
                                     <div class="text-center">
-                                        <img class="profile-user-img img-fluid  img-circle"style="background-color:;" src="https://media.licdn.com/dms/image/v2/D4D03AQHTh7RcmRs_5Q/profile-displayphoto-crop_800_800/B4DZkSQJ9pGgAM-/0/1756947849521?e=1762387200&v=beta&t=kirQ_EB-qZn4ecorrpYAe-eZhHNoW0Wj8wjEJOgjn54"
-                                         alt="Foto do dono da página">
+                                        <img class="profile-user-img img-fluid  img-circle"style="background-color:;" src="https://media.licdn.com/dms/image/v2/D4D03AQHTh7RcmRs_5Q/profile-displayphoto-crop_800_800/B4DZkSQJ9pGgAM-/0/1756947849521?e=1765411200&v=beta&t=JxrQiCgNgDW1YAepG35fATVX5Zal8tEcLQH-3IIKXXs"
                                     </div>
 
                                     <h3 class="profile-username text-center">Matheus Alexandrino</h3>
 
                                     <p class="text-muted text-center">Software Developer</p>
 
-                                    <!-- <ul class="list-group list-group-unbordered mb-3 ">
+                                    <ul class="list-group list-group-unbordered mb-3 ">
                                         <li class="list-group-item bg-dark">
                                             <b>GITHUB</b> <a class="float-right">1,322</a>
                                         </li>
                                         <li class="list-group-item">
                                             <b>Following</b> <a class="float-right">543</a>
                                         </li>
-                                        <li class="list-group-item">
+                                        <!--<li class="list-group-item">
                                             <b>Friends</b> <a class="float-right">13,287</a>
-                                        </li>
-                                    </ul> -->
+                                        </li> -->
+                                    </ul> 
 
                                     <!-- <a href="#contato" class="btn btn-primary btn-block"><b>Conectar</b></a> -->
                                 </div>
@@ -94,10 +93,10 @@
 
                                     <p class="text-muted">
                                         <span class="tag tag-danger"></i> Desenvolvimento Backend</span><br>
-                                        <span class="tag tag-success">Analista Genexus v17 </span><br>
-                                        <span class="tag tag-info">Javascript Vanilla</span><br>
-                                        <span class="tag tag-info">React.js iniciando</span><br>
-                                        <span class="tag tag-info">Node.js iniciando</span><br>
+                                        <span class="tag tag-success">Analista Genexus v17+ </span><br>
+                                        <span class="tag tag-info">Javascript</span><br>
+                                        <span class="tag tag-info">React.js </span><br>
+                                        <span class="tag tag-info">Node.js </span><br>
                                         <span class="tag tag-warning">PHP e Laravel Framework</span><br>                                       
                                         <span class="tag tag-warning">RestAPI (Node.js e Laravel/PHP) </span><br>                                       
                                         <span class="tag tag-warning">Orientação a Objetos</span><br>                                       
@@ -110,8 +109,8 @@
 
                                     <strong><i class="far fa-file-alt mr-1"></i> Quem sou eu</strong>
 
-                                    <p class="text-muted">Meu nome é Matheus Alexandrino, tenho 29 anos, sou natural de Itararé, interior de São Paulo.
-                                    Possuo 3 anos de experiência como Analista de Suporte de TI e mais de dois anos de experiência com desenvolvimento backend.
+                                    <p class="text-muted">Meu nome é Matheus Alexandrino, tenho ${idade} anos, sou natural de Itararé, interior de São Paulo.
+                                    Possuo mais de 5 anos de experiência na area de TI e mais de dois anos de experiência com desenvolvimento backend.
                                     </p>
                                 </div>
                                 <!-- /.card-body -->
@@ -125,7 +124,7 @@
                                     <ul class="nav nav-pills">
                                         <!-- <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Atividades</a></li> -->
                                         <li class="nav-item"><a class="nav-link active" href="#timeline" data-toggle="tab" style="background-color: #1877f2;">Timeline</a></li>
-                                        <!-- <li class="nav-item"><a class="nav-link" href="#contato" data-toggle="tab">Contato</a></li> -->
+                                        <li class="nav-item"><a class="nav-link" href="#contato" data-toggle="tab">Contato</a></li> 
                                         <!-- <li class="nav-item"><a class="nav-link" href="#projetos" data-toggle="tab">Projetos</a></li> -->
                                     </ul>
                                 </div>
@@ -344,6 +343,23 @@
     <script src="../../dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
+    
+    <script>
+    // Defina sua data de nascimento aqui (ano, mês-1, dia)
+    const nascimento = new Date(1993, 8, 21); 
+    const hoje = new Date();
+
+    let idade = hoje.getFullYear() - nascimento.getFullYear();
+    const mes = hoje.getMonth() - nascimento.getMonth();
+
+    if (mes < 0 || (mes === 0 && hoje.getDate() < nascimento.getDate())) {
+      idade--;
+    }
+
+    document.getElementById("idade").textContent = `Você tem ${idade} anos.`;
+  </script>
+
+
 </body>
 
 </html>
